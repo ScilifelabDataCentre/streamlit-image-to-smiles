@@ -1,0 +1,5 @@
+streamlit==1.39.0
+streamlit_ketcher==0.0.1
+tensorflow==2.15.0
+decimer==2.7.1
+opencv-python-headless==4.10.0.84
