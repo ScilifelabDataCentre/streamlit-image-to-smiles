@@ -25,7 +25,7 @@ COPY app/test_predictions $HOME/app/test_predictions/
 RUN python test_predictions/DECIMER_test_prediction.py
 
 # Copy all files that the app needs
-COPY app/Main.py $HOME/app/Main.py
+COPY app/app.py $HOME/app/app.py
 COPY app/pages $HOME/app/pages/
 
 USER $USER
@@ -33,4 +33,4 @@ EXPOSE 8501
 
 HEALTHCHECK CMD curl --fail http://localhost:8501/_stcore/health
 
-ENTRYPOINT ["streamlit", "run", "Main.py", "--server.port=8501", "--server.address=0.0.0.0"]
+ENTRYPOINT ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
