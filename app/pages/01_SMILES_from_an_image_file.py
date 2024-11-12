@@ -13,6 +13,14 @@ st.markdown("Here you can upload your image of a chemical structure depiction (f
 
 st.write("The image files are only stored in RAM memory and are removed as soon as you close or reload the page.")
 
+with open("./test_predictions/example_structure_2.jpg", "rb") as file:
+    btn = st.download_button(
+        label="Download an example image",
+        data=file,
+        file_name="example_structure.jpg",
+        mime="image/jpg",
+    )
+
 st.subheader("Step 1. Upload a file", divider="gray")
 
 # Input widget for users to upload image files from their computer

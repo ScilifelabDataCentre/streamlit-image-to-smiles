@@ -2,9 +2,10 @@ import streamlit as st
 
 st.title("Predict SMILES encodings of chemical structure depictions in images")
 
-intro = '''This application allows users to either [upload an image file](/SMILES_from_an_image_file) or [take a picture using their webcam](/SMILES_from_a_webcam_photo)
-and get a prediction the chemical structure depicted in the image in SMILES notation. 
-The chemical structure depiction can be machine or hand drawn.
+intro = '''This application allows users to either upload an image file or take a picture using their webcam
+and get a prediction the chemical structure depicted in the image in SMILES notation. You can navigate using 
+__links in the sidebar to the left__. The chemical structure depiction can be machine or hand drawn. Note that
+loading the pages or getting a prediction may sometimes take a while.
 
 This application is using the [DECIMER Image Transformer](https://github.com/Kohulan/DECIMER-Image_Transformer) (MIT license)
 model to make predictions (as implemented in the [DECIMER Python package](https://pypi.org/project/decimer/)). The DECIMER (Deep lEarning for Chemical ImagE Recognition) addresses the Optical Chemical Structure 
