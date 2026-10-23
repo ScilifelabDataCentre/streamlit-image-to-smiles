@@ -14,7 +14,10 @@ WORKDIR $HOME/app
 # Update system and install dependencies.
 RUN apt-get update && apt-get install --no-install-recommends -y \
     build-essential \
-    software-properties-common
+    software-properties-common \
+    libgl1 \
+    libglib2.0-0 \
+    && rm -rf /var/lib/apt/lists/*
 
 # Copy requirements.txt and install packages listed there with pip (this will place the files in home/username/)
 COPY app/requirements.txt $HOME/app/requirements.txt
