@@ -1,4 +1,4 @@
-FROM python:3.10.0-slim
+FROM python:3.11.0-slim
 
 # Create user name and home directory variables. 
 # The variables are later used as $USER and $HOME. 
